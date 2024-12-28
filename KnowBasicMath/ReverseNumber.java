@@ -1,4 +1,4 @@
-package LearnBasicMath;
+package KnowBasicMath;
 
 public class ReverseNumber {
 
