@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FactorialOfNNumbers {
-    
+
     public static long factorial(long n) {
-        if(n == 0) {
+        if (n == 0) {
             return 1;
         }
-        return n * factorial(n-1);
+        return n * factorial(n - 1);
     }
 
     public static List<Long> factorialNumbers(long n) {
@@ -17,9 +17,9 @@ public class FactorialOfNNumbers {
         List<Long> list = new ArrayList<>();
         long startingNumber = 1;
 
-        while(true) {
+        while (true) {
             long fact = factorial(startingNumber);
-            if(fact > n) {
+            if (fact > n) {
                 break;
             }
             list.add(fact);
@@ -29,6 +29,6 @@ public class FactorialOfNNumbers {
     }
 
     public static void main(String[] args) {
-        factorialNumbers(120);
+        factorial(120);
     }
 }

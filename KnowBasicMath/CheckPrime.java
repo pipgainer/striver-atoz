@@ -13,11 +13,6 @@ public class CheckPrime {
                 break;
             }
         }
-        if (isPrime) {
-            System.out.print("YES");
-        } else {
-            System.out.print("NO");
-        }
         return isPrime;
     }
 

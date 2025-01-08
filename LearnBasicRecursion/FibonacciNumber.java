@@ -25,12 +25,20 @@ public class FibonacciNumber {
         return array;
     }
 
+    public static int fibWithRecursion(int n) {
+        if (n <= 1) {
+            return n;
+        }
+        return fibWithRecursion(n - 1) + fibWithRecursion(n - 2);
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        int[] result = generateFibonacciNumbers(n);
-        for (int i : result) {
-            System.out.println(i);
-        }
+        // int[] result = generateFibonacciNumbers(n);
+        // for (int i : result) {
+        // System.out.println(i);
+        // }
+        System.out.println(fibWithRecursion(n));
     }
 }
