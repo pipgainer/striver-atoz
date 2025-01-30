@@ -1,28 +1,30 @@
 package LearnBasicHashing;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CountingFrequencyInRange {
 
-    public static int[] countFrequency(int n, int x, int []nums){
+    public static List<Integer> frequencyCount(int[] arr) {
+        ArrayList<Integer> hash = new ArrayList<Integer>();
 
-        // Write your code here.
-        int[] hash = new int[x+1];
-
-        for (int i : nums) {
-            hash[i]++;
+        for (int i = 0; i < arr.length; i++) {
+            hash.add(0); // Fill with 0 initially
         }
 
-        for (int i : hash) {
-            System.out.println(i);
+        // Increment the frequency for each element in the input array
+        for (int i = 0; i < arr.length; i++) {
+            int index = arr[i] - 1; // Use the value in arr as the index
+            hash.set(index, hash.get(index) + 1); // Increment the count
         }
 
         return hash;
-        
     }
-    
+
     public static void main(String[] args) {
-        
-        int[] array = {11, 14, 8, 3, 12, 14, 1, 7 , 4,3 };
-        
-        countFrequency(10, 14, array);
+
+        int[] array = { 2, 3, 2, 3, 5 };
+
+        frequencyCount(array);
     }
 }
