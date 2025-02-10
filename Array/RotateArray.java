@@ -4,33 +4,20 @@ import java.util.Arrays;
 
 public class RotateArray {
     public static void rotate(int[] nums, int k) {
+        k %= nums.length;
+        reverse(nums, 0, nums.length - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, nums.length - 1);
+    }
 
-        if (k == nums.length || nums.length == 1) {
-            System.out.println(Arrays.toString(nums));
-            return;
+    public static void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
         }
-        while (k > nums.length) {
-            k = k - nums.length;
-        }
-
-        // Declare an array
-        int[] numbers;
-
-        // Allocate memory for 5 integers
-        numbers = new int[nums.length];
-        int j = 0;
-        for (int i = nums.length - k; i < nums.length; i++) {
-            numbers[j] = nums[i];
-            j++;
-        }
-        for (int i = 0; i < nums.length - k; i++) {
-            numbers[j] = nums[i];
-            j++;
-        }
-        for (int i = 0; i < numbers.length; i++) {
-            nums[i] = numbers[i];
-        }
-        System.out.println(Arrays.toString(nums));
     }
 
     public static void main(String[] args) {
