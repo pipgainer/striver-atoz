@@ -1,29 +1,23 @@
-package Array;
+import java.util.*;
 
 public class MaxConsecutiveOnes {
-    public static int findMaxConsecutiveOnes(int[] nums) {
-        int consecutiveNumber = 0;
-        int maxCon = 0;
-
-        if (nums.length == 1)
-            return nums[0];
-
+    static int findMaxConsecutiveOnes(int nums[]) {
+        int cnt = 0;
+        int maxi = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == 1) {
-                consecutiveNumber++;
-                if (consecutiveNumber > maxCon) {
-                    maxCon = consecutiveNumber;
-                }
+                cnt++;
             } else {
-                consecutiveNumber = 0;
+                cnt = 0;
             }
-        }
-        return maxCon;
-    }
 
-    public static void main(String[] args) {
-        int arr[] = { 1, 1, 0, 1 };
-        int result = findMaxConsecutiveOnes(arr);
-        System.out.println(result);
+            maxi = Math.max(maxi, cnt);
+        }
+        return maxi;
+    }
+    public static void main(String args[]) {
+        int nums[] = { 1, 1, 0, 1, 1, 1 };
+        int ans = findMaxConsecutiveOnes(nums);
+        System.out.println("The maximum  consecutive 1's are " + ans);
     }
 }
