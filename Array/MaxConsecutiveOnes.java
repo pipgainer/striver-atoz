@@ -1,4 +1,4 @@
-import java.util.*;
+package Array;
 
 public class MaxConsecutiveOnes {
     static int findMaxConsecutiveOnes(int nums[]) {
@@ -15,6 +15,7 @@ public class MaxConsecutiveOnes {
         }
         return maxi;
     }
+
     public static void main(String args[]) {
         int nums[] = { 1, 1, 0, 1, 1, 1 };
         int ans = findMaxConsecutiveOnes(nums);
