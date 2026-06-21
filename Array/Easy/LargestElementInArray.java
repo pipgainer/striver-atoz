@@ -1,4 +1,4 @@
-package Array;
+package Array.Easy;
 
 public class LargestElementInArray {
     public static int largest(int[] arr) {

@@ -1,4 +1,4 @@
-package Array;
+package Array.Easy;
 
 public class MoveZeroes {
     public static void moveZeroes(int[] nums) {

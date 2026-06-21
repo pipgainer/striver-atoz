@@ -1,4 +1,4 @@
-package Array;
+package Array.Easy;
 
 public class RemoveDuplicatesFromSortedArray {
     public static int removeDuplicates(int[] nums) {
